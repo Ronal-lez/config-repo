@@ -8,11 +8,11 @@ resilience4j:
     instances:
       productServiceCircuitBreaker:
         registerHealthIndicator: true
-        slidingWindowSize: 5
-        failureRateThreshold: 50
+        slidingWindowSize: 3
+        failureRateThreshold: 100
         waitDurationInOpenState: 5s
         permittedNumberOfCallsInHalfOpenState: 2
-        minimumNumberOfCalls: 5
+        minimumNumberOfCalls: 3
         automaticTransitionFromOpenToHalfOpenEnabled: true
   retry:
     instances:
