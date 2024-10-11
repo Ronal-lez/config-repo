@@ -2,3 +2,24 @@ server:
   port: 8082
 
 mensaje: "hola desde microservicio 2"
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      productServiceCircuitBreaker:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 2
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+  retry:
+    instances:
+      productServiceRetry:
+        maxAttempts: 3 # N�mero de intentos
+        waitDuration: 1s # Tiempo de espera entre reintentos
+  timelimiter:
+    instances:
+      productServiceTimeLimiter:
+        timeoutDuration: 2s
