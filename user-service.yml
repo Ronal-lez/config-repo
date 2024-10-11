@@ -2,3 +2,33 @@ server:
   port: 8081
 
 mensaje: "hola desde microservicio 1"
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 951240957699-i8nsrkrai1c30uqq47db4g5l1i0bshfc.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile, email
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+            client-name: Google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
