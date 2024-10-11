@@ -17,8 +17,8 @@ resilience4j:
   retry:
     instances:
       productServiceRetry:
-        maxAttempts: 3 # N�mero de intentos
-        waitDuration: 1s # Tiempo de espera entre reintentos
+        maxAttempts: 3
+        waitDuration: 1s
   timelimiter:
     instances:
       productServiceTimeLimiter:
