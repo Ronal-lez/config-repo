@@ -7,8 +7,13 @@ spring:
     username: cibertec
     password: P3rdigon@159
     driver-class-name: com.mysql.cj.jdbc.Driver
+  batch:
+    jdbc:
+      platform: org.hibernate.dialect.MySQLDialect
   jpa:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+    properties:
+      hibernate.format_sql: true
 
