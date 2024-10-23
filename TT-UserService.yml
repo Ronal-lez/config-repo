@@ -10,6 +10,21 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 713050394571-d692km6uok2f8f1vm78hbpl59cc5ng6t.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile, email
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+            client-name: Google
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo  
 
 jwt:
     secret: a1B!c2D@e3F#g4H$i5J%k6LF#g4H$i5J%k6L^m7N&o8P*q9R
