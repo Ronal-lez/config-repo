@@ -5,6 +5,8 @@ management:
     web:
       exposure:
         include: prometheus
+  security:
+    enabled: false
 spring:
   datasource:
     url: jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:6543/postgres?user=postgres.ehlpjxftyqbgstmcxecj&password=usuario-service
