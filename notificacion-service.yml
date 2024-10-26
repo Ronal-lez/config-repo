@@ -1,2 +1,8 @@
 server:
   port: 8092
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
