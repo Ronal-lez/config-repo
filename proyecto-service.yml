@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:6543/postgres?user=postgres.ywsopfqkxzfgxxtxmque&password=fTGC828Wh8-rLFe
+    url: jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:6543/postgres?user=postgres.mbtfqtmfuqwvlafwldng&password=proyecto-service
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
