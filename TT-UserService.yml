@@ -1,5 +1,5 @@
 server:
-    port: 8080
+    port: 8085
 spring:
   datasource:
     url: jdbc:postgresql://aws-0-us-west-1.pooler.supabase.com:6543/postgres?user=postgres.navmbtpdyfybizxhgziw&password=usuario-service
